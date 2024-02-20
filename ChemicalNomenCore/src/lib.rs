@@ -1,3 +1,5 @@
+mod data;
+
 pub fn hello() -> String {
     return "Hello, world!".to_string();
 }
