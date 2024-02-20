@@ -1,3 +1,6 @@
+use serde::{Deserialize, Serialize};
+use serde_json::Result;
+
 const AVAILABLE_ELEMENTS: [&str; 119] = [
     "hydrogen", "helium", "lithium", "beryllium", "boron", "carbon", "nitrogen", "oxygen",
     "fluorine", "neon", "sodium", "magnesium", "aluminium", "silicon", "phosphorus", "sulfur",
@@ -16,3 +19,37 @@ const AVAILABLE_ELEMENTS: [&str; 119] = [
     "roentgenium", "copernicium", "nihonium", "flerovium", "moscovium", "livermorium", "tennessine",
     "oganesson", "ununennium"
 ];
+
+#[derive(Serialize, Deserialize)]
+struct Element {
+    name: String,
+    root: String,
+    symbol: String,
+    appearance: String,
+    atomic_mass: f64,
+    boil: f64,
+    category: String,
+    density: f64,
+    discovered_by: String,
+    melt: f64,
+    molar_heat: f64,
+    named_by: String,
+    number: i64,
+    period: i64,
+    group: i64,
+    phase: String,
+    summary: String,
+    xpos: i64,
+    ypos: i64,
+    wxpos: i64,
+    wypos: i64,
+    shells: Vec<i64>,
+    electron_configuration: String,
+    electron_configuration_semantic: String,
+    electron_affinity: f64,
+    electronegativity_pauling: f64,
+    ionization_energies: Vec<f64>,
+    oxidation_states: Vec<i64>,
+    cpk_hex_color: String,
+    block: String,
+}
