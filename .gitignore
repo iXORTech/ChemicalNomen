@@ -1,3 +1,6 @@
+## IDE Settings ##
+.idea/
+
 ## Rust Build and Cargo Lock Files ##
 **/target
 **/Cargo.lock
