@@ -1,7 +1,17 @@
 [package]
 name = "chemical_nomen_core"
-version = "0.1.0"
+version = "0.1.0-SNAPSHOT"
 edition = "2021"
+authors = [
+    "iXOR Technology",
+    "Qian Qian \"Cubik\" (Cubik65536) <cubik65536@cubik65536.top>"
+]
+repository = "https://github.com/iXORTech/ChemicalNomen"
+description = "Rust CLI Application that converts chemical formula to its name or vice versa."
+readme = "README.md"
+license = "AGPL-3.0"
+categories = ["science"]
+keywords = ["chemistry", "nomenclature", "naming", "chemical_formula"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
