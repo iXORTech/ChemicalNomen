@@ -1,0 +1,7 @@
+[workspace]
+members = [
+    "ChemicalNomenCLI"
+]
+
+[workspace.dependencies]
+chemical_nomen_core = { path = "ChemicalNomenCore" }
