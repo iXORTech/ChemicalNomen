@@ -1,7 +1,9 @@
 use serde::{Deserialize, Serialize};
 use serde_json::Result;
 
-const AVAILABLE_ELEMENTS: [&str; 119] = [
+const MAX_ELEMENT_NUMBER: i64 = 119;
+
+const AVAILABLE_ELEMENTS: [&str; MAX_ELEMENT_NUMBER as usize] = [
     "hydrogen", "helium", "lithium", "beryllium", "boron", "carbon", "nitrogen", "oxygen",
     "fluorine", "neon", "sodium", "magnesium", "aluminium", "silicon", "phosphorus", "sulfur",
     "chlorine", "argon", "potassium", "calcium", "scandium", "titanium", "vanadium", "chromium",
@@ -18,6 +20,17 @@ const AVAILABLE_ELEMENTS: [&str; 119] = [
     "rutherfordium", "dubnium", "seaborgium", "bohrium", "hassium", "meitnerium", "darmstadtium",
     "roentgenium", "copernicium", "nihonium", "flerovium", "moscovium", "livermorium", "tennessine",
     "oganesson", "ununennium"
+];
+
+const AVAILABLE_ELEMENTS_SYMBOLS: [&str; MAX_ELEMENT_NUMBER as usize] = [
+    "H", "He", "Li", "Be", "B", "C", "N", "O", "F", "Ne", "Na", "Mg", "Al", "Si", "P", "S", "Cl",
+    "Ar", "K", "Ca", "Sc", "Ti", "V", "Cr", "Mn", "Fe", "Co", "Ni", "Cu", "Zn", "Ga", "Ge", "As",
+    "Se", "Br", "Kr", "Rb", "Sr", "Y", "Zr", "Nb", "Mo", "Tc", "Ru", "Rh", "Pd", "Ag", "Cd", "In",
+    "Sn", "Sb", "Te", "I", "Xe", "Cs", "Ba", "La", "Ce", "Pr", "Nd", "Pm", "Sm", "Eu", "Gd", "Tb",
+    "Dy", "Ho", "Er", "Tm", "Yb", "Lu", "Hf", "Ta", "W", "Re", "Os", "Ir", "Pt", "Au", "Hg", "Tl",
+    "Pb", "Bi", "Po", "At", "Rn", "Fr", "Ra", "Ac", "Th", "Pa", "U", "Np", "Pu", "Am", "Cm", "Bk",
+    "Cf", "Es", "Fm", "Md", "No", "Lr", "Rf", "Db", "Sg", "Bh", "Hs", "Mt", "Ds", "Rg", "Cn", "Nh",
+    "Fl", "Mc", "Lv", "Ts", "Og", "Uue"
 ];
 
 #[derive(Serialize, Deserialize)]
